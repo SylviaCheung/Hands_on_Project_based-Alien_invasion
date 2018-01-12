@@ -6,8 +6,10 @@ import pygame
 def run_game():
 	# 初始化游戏并创建一个屏幕对象
 	pygame.init()# 初始化背景设置
-	screen = pygame.display.set_mode((1000, 600))
-	pygame.display.set_caption("Alien Invasion")
+	screen = pygame.display.set_mode((1000, 600))#绘制屏幕的大小
+	pygame.display.set_caption("Alien Invasion")#窗口名
+
+	bg_color = (230, 0, 0)
 
 	# 开始游戏循环
 	while True:
