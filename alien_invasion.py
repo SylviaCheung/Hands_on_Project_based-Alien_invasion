@@ -1,10 +1,9 @@
-# coding=utf-8
-import sys
-
+# coding=utf-8W
 import pygame
 
 from settings import Settings
 from ship import Ship
+import game_function as gf
 
 def run_game():
 	# 初始化游戏并创建一个屏幕对象
@@ -15,17 +14,10 @@ def run_game():
 
 	pygame.display.set_caption("Alien Invasion")#窗口名
 	ship = Ship(screen)
-	# bg_color = (230, 0, 0)# 设置屏幕颜色，弹出来的屏幕仍是黑色？
 
 	# 开始游戏循环
 	while True:
-
-		# 监视键盘和鼠标事件
-		for event in pygame.event.get():
-			if event.type == pygame.QUIT:
-				sys.exit()
-		screen.fill(ai_settings.bg_color)
-		ship.blitme()
+		gf.check_events()
 
 		# 让最近绘制的屏幕可见
 		pygame.display.flip()
